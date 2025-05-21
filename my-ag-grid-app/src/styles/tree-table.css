@@ -1,0 +1,179 @@
+/* ================= */
+/* === Base Styles === */
+/* ================= */
+
+.tree-table {
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+/* ==================== */
+/* === Controls Panel === */
+/* ==================== */
+
+.controls {
+  margin-bottom: 20px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  background: #f5f5f5;
+  border-bottom: 1px solid #e0e0e0;
+  padding: 10px;
+}
+
+.mode-button {
+  padding: 8px 16px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.mode-button:hover {
+  background-color: #45a049;
+}
+
+/* ====================== */
+/* === History Controls === */
+/* ====================== */
+
+.history-controls {
+  display: flex;
+  gap: 8px;
+  margin-left: 10px;
+}
+
+.history-controls button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  background: #2196f3;
+  color: white;
+}
+
+.history-controls button:hover {
+  background: #1976d2;
+  opacity: 0.8;
+}
+
+.history-controls button.redo-button {
+  background: #f44336;
+  color: white;
+}
+
+.history-controls button.redo-button:hover {
+  background: #d32f2f;
+}
+
+.history-controls button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* ========================= */
+/* === AG Grid Theme Setup === */
+/* ========================= */
+
+.ag-theme-quartz.custom-grid {
+  --ag-border-color: #e0e0e0;
+  --ag-header-height: 40px;
+  --ag-row-height: 40px;
+  overflow: hidden !important;
+  width: 100%;
+  height: 100%;
+}
+
+.ag-theme-quartz {
+  width: 100%;
+  height: 100%;
+}
+
+.ag-theme-quartz::-webkit-scrollbar {
+  display: none;
+  width: 0 !important;
+  height: 0 !important;
+}
+
+/* ====================== */
+/* === Header & Cells === */
+/* ====================== */
+
+.ag-theme-quartz .ag-header-cell::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100% !important;
+  width: 1px;
+  background-color: var(--ag-border-color);
+}
+
+.ag-theme-quartz .ag-header-cell {
+  border-right: 1px solid #e0e0e0 !important;
+  border-bottom: 1px solid #e0e0e0 !important;
+  padding: 0 !important;
+  overflow: visible !important;
+}
+
+.ag-theme-quartz .ag-header-cell-label {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 12px;
+  font-weight: bold;
+}
+
+.ag-theme-quartz .ag-cell {
+  border-right: 1px solid var(--ag-border-color);
+  padding: 0 12px !important;
+  line-height: 40px !important;
+  display: flex;
+  align-items: center;
+  overflow: visible !important;
+  border-right: none !important;
+}
+
+.ag-theme-quartz .ag-cell:focus,
+.ag-theme-quartz .ag-cell-focus,
+.ag-theme-quartz .ag-cell-range-selected,
+.ag-theme-quartz .ag-cell-range-single-cell,
+.ag-theme-quartz .ag-cell-focused,
+.ag-theme-quartz .ag-row:focus {
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* ======================= */
+/* === Scroll & Layout === */
+/* ======================= */
+
+.ag-theme-quartz .ag-body-viewport,
+.ag-theme-quartz .ag-body-viewport-wrapper,
+.ag-theme-quartz .ag-center-cols-viewport,
+.ag-theme-quartz .ag-center-cols-container,
+.ag-theme-quartz .ag-body-container {
+  overflow-x: hidden !important;
+  width: 100% !important;
+}
+
+.ag-theme-quartz .ag-root-wrapper,
+.ag-theme-quartz .ag-body-viewport {
+  overflow: hidden !important;
+}
+
+/* ================== */
+/* === Row Height === */
+/* ================== */
+
+.ag-theme-quartz .ag-row {
+  height: 40px !important;
+}
