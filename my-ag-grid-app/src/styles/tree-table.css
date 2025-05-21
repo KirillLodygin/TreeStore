@@ -132,13 +132,13 @@
 }
 
 .ag-theme-quartz .ag-cell {
-  border-right: 1px solid var(--ag-border-color);
   padding: 0 12px !important;
   line-height: 40px !important;
   display: flex;
   align-items: center;
   overflow: visible !important;
   border-right: none !important;
+  border-bottom: 1px solid var(--ag-border-color);
 }
 
 .ag-theme-quartz .ag-cell:focus,
