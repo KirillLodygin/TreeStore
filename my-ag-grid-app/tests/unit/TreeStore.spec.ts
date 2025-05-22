@@ -1,8 +1,9 @@
+import { describe, it, expect, beforeEach } from 'vitest'
 import { TreeStore, Item } from '@/services/TreeStore'
 
 describe('TreeStore', () => {
   let store: TreeStore
-  
+
   beforeEach(() => {
     store = new TreeStore()
   })
@@ -15,7 +16,7 @@ describe('TreeStore', () => {
 
     it('should have root items with null parent', () => {
       const items = store.getAll()
-      const rootItems = items.filter(item => item.parent === null)
+      const rootItems = items.filter((item) => item.parent === null)
       expect(rootItems.length).toBeGreaterThan(0)
     })
   })

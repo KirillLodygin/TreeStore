@@ -1,12 +1,13 @@
 {
   "extends": "./tsconfig.app.json",
   "compilerOptions": {
-    "module": "commonjs",
+    "module": "ES2022",
     "moduleResolution": "node",
     "esModuleInterop": true,
     "allowJs": true,
     "isolatedModules": true,
-    "jsx": "preserve"
+    "jsx": "preserve",
+    "target": "ES2022"
   },
   "include": [
     "tests/**/*.ts",

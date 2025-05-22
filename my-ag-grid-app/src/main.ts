@@ -1,5 +1,4 @@
 import { createApp } from 'vue'
-import { createPinia } from 'pinia'
 
 import 'ag-grid-community/styles/ag-grid.css'
 import 'ag-grid-community/styles/ag-theme-quartz.css'
@@ -23,8 +22,6 @@ if (licenseKey) {
   console.warn('AG Grid license key is missing!')
 }
 
-const pinia = createPinia()
 const app = createApp(App)
 
-app.use(pinia)
 app.mount('#app')
